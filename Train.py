@@ -43,7 +43,7 @@ tes_label,tes_title, tes_des,len_vocab_tes,max_sentence_length_tes,vocab = load_
 model = EMNN_des(max_sentence_length,len_vocab,num_classes,memory_size, 
              Dropout_rate=Dropout_rate, data_type='float32')
 
-file_path = pickle_path + 'MemNNmodel_classification_ag_des_float32' + '.h5'
+file_path = pickle_path + 'SeMemNN_classification_float32' + '.h5'
 
 callback_list = [
                     EarlyStopping(
@@ -84,7 +84,7 @@ val_acc = np.asarray(history['val_acc'])
 pltfunction(val_acc,val_loss,pickle_path,"val_ag_des_float32")
 
 acc_and_loss = np.column_stack((acc, loss, val_acc, val_loss))
-save_file_blstm = pickle_path+'MemNNmodel_classification_ag_des_float32' + '.csv'
+save_file_blstm = pickle_path+'history' + '.csv'
 with open(save_file_blstm, 'wb'):
     np.savetxt(save_file_blstm, acc_and_loss)
 

@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
-
-
 from keras.models import Sequential, Model, load_model
 from keras.layers.embeddings import Embedding
 from keras.layers import Input, Activation, Dense, Permute, Dropout, Flatten
@@ -82,10 +76,5 @@ def EMNN(max_sentence_length,len_vocab,num_classes, Mem_size, Dropout_rate=0.3, 
                   metrics=['accuracy'])
     model.summary()
     return model
-
-
-# In[ ]:
-
-
 
 

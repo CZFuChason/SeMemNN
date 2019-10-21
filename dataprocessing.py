@@ -1,6 +1,3 @@
-#Author Fu
-#Project Experience_Text_Classification
-
 
 import numpy as np
 from fastNLP import DataSet

@@ -65,7 +65,7 @@ def EMNN(max_sentence_length,len_vocab,num_classes, Mem_size, Dropout_rate=0.3, 
 
     R = concatenate([response, title_encoded])
     R = Bidirectional(LSTM(256,return_sequences=True,dropout=Dropout_rate))(R)
-    R = SeqSelfAttention(attention_width=15, attention_activation='sigmoid')(R)
+    R = SeqSelfAttention(attention_width=16, attention_activation='sigmoid')(R)
     R = Flatten()(R)
     result = Dense(num_classes)(R)  # (samples, vocab_size)
     result = Activation('softmax')(result)

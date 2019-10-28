@@ -71,7 +71,7 @@ def token(dataset,max_sentence_length=None,vocab=None):
 
 
 def load_file(file_path, max_len,vocab):
-    # read csv data to DataSet
+    # read csv data to DataSet (change DataSet.read_csv to fastNLP.io.CSVLoader if you use the latest fastNLP)
     dataset = DataSet.read_csv(file_path,headers=('label','title','description'),sep='","')
     # preprocess data
     dataset.apply(lambda x: int(x['label'][1])-1,new_field_name='label')

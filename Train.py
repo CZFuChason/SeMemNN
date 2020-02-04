@@ -28,7 +28,7 @@ pickle_path = './Result/'
 num_classes = 4
 Dropout_rate = 0.3
 max_sentence_length=256
-memory_size=256
+memory_size=128
 
 
 tra_label,tra_title,tra_des,len_vocab,_,vocab = load_dataset(train_csv,

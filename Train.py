@@ -43,7 +43,7 @@ tes_label,tes_title, tes_des,len_vocab_tes,max_sentence_length_tes,vocab = load_
 model = EMNN_des(max_sentence_length,len_vocab,num_classes,memory_size, 
              Dropout_rate=Dropout_rate, data_type='float32')
 
-file_path = pickle_path + 'SeMemNN_classification_float32' + '.h5'
+file_path = pickle_path + 'SeMemNN_classification' + '.h5'
 
 callback_list = [
                     EarlyStopping(

@@ -17,7 +17,7 @@ import os
 
 
 # Model
-def EMNN(max_sentence_length,len_vocab,num_classes, Mem_size, Dropout_rate=0.3, data_type='float16'):
+def SeMemNN(max_sentence_length,len_vocab,num_classes, Mem_size, Dropout_rate=0.3, data_type='float16'):
     # placeholders
     des = Input((max_sentence_length,), dtype=data_type)
     title = Input((max_sentence_length,), dtype=data_type)

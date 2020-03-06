@@ -40,7 +40,7 @@ tes_label,tes_title, tes_des,len_vocab_tes,max_sentence_length_tes,vocab = load_
                                                                                         vocab=vocab)
 
 
-model = EMNN_des(max_sentence_length,len_vocab,num_classes,memory_size, 
+model = SeMemNN(max_sentence_length,len_vocab,num_classes,memory_size, 
              Dropout_rate=Dropout_rate, data_type='float32')
 
 file_path = pickle_path + 'SeMemNN_classification' + '.h5'
